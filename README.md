@@ -15,6 +15,6 @@ Guidelines:
 
 Structure the code as if this was a real, production application and state any assumptions you make as comments in the codebase. If any aspects of the above specification is unclear then please also state, as comments in the source, your interpretation of the requirement.
 
-In evaluating your solution, we will pay particular attention to functionality, code structure and clarity of implementation, but also aesthetics of the user interface.
+In evaluating your solution, we will pay particular attention to functionality, code structure and clarity of implementation, but also aesthetics of the user interface. Bonus points will be given for well written tests.
 
 Happy coding!
