@@ -1,7 +1,7 @@
 City Pantry Front-End Coding Test
 ==========================
 
-Your task is to implement a simple webpage to display a list of food packages that we can deliver to the Houses of Parliament in London. You are required to use `PackagesFactory.searchPackages` of the `citypantry-js-lib` library to access our API for the package search. The solution should meet at least the following requirements:
+Your task is to implement a simple webpage to display a list of food packages that we can deliver to the Houses of Parliament in London. You are required to use `PackagesFactory.searchPackages` of the [citypantry-js-lib](https://github.com/CityPantry/citypantry-js-lib) library to access our API for the package search. The solution should meet at least the following requirements:
 
 * The webpage has an input box to enter a desired type of food (e.g. "burritos", "burgers", etc.)
 * The listed food packages get updated upon input change to match the desired food type
