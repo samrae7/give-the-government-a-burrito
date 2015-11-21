@@ -9,18 +9,16 @@ angular.module('jsCodingTest').controller('GiveTheGovernmentABurrito', function(
     self.foodType ='burger'
 
     self.change = function() {
-      console.log(self.foodType)
+      self.getFoods()
     }
 
     self.getFoods = function() {
-      PackagesFactory.searchPackages(self.foodType,'SW1A0AA').then(function(response) {
+      PackagesFactory.searchPackages('','SW1A0AA').then(function(response) {
         self.foods = response.data.packages
         console.log(self.foods)
       })
 
     }
-
-    self.getFoods()
 
 
 
