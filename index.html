@@ -3,7 +3,7 @@
     </head>
     <body ng-app="jsCodingTest">
         <main ng-controller="GiveTheGovernmentABurrito as cp">
-            <select ng-model="cp.foodType" name="select">
+            <select ng-model="cp.foodType" name="select" ng-change="cp.getFoods()">
                 <option value="burrito">Burritos</option> 
                 <option value="burger" selected>Burgers</option>
             </select>
