@@ -1,5 +1,8 @@
 <html>
     <head>
+        <title>Government Grub</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/css/foundation.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body ng-app="jsCodingTest">
         <main ng-controller="GiveTheGovernmentABurrito as cp">
@@ -10,9 +13,25 @@
 
             <label>Search: <input ng-model="cp.searchText.name" ng-change="cp.change()"></label>
 
-            <ul>
-                <li ng-repeat="food in cp.foods | filter:cp.searchText">{{food.name}}</li>
-            </ul>
+
+<div class="row small-up-1 medium-up-2 large-up-4">   
+    <div class="column" ng-repeat="food in cp.foods | filter:cp.searchText">
+        <div class="dish-container">
+            <img ng-src="{{food.images[0].medium}}" class="thumbnail" alt="">
+            <div>
+                <h5>{{food.name}}</h5>
+                <p><strong>Vendor</strong>: {{food.vendor.name}}</p>
+                <p><strong>Cost:</strong> &#163{{food.totalGrossFoodCost}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  
+
+
+         
         </main>
 
         <script src="lib/angular.min.js"></script>

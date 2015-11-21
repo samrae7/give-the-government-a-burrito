@@ -20,6 +20,8 @@ angular.module('jsCodingTest').controller('GiveTheGovernmentABurrito', function(
 
     }
 
+    self.getFoods()
+
 
 
 
