@@ -2,13 +2,20 @@
     <head>
     </head>
     <body ng-app="jsCodingTest">
-        <main ng-controller="GiveTheGovernmentABurrito">
-            Write your HTML here.
+        <main ng-controller="GiveTheGovernmentABurrito as cp">
+            <select ng-model="cp.foodType" name="select">
+                <option value="burrito">Burritos</option> 
+                <option value="burger" selected>Burgers</option>
+            </select>
+
+            <ul>
+                <li ng-repeat="food in cp.foods">{{food.name}}</li>
+            </ul>
         </main>
 
         <script src="lib/angular.min.js"></script>
         <script src="lib-integration.js"></script>
         <script src="node_modules/citypantry-js-lib/dist/lib-es5-with-browser-polyfill.js"></script>
-        <script src="your-code.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
