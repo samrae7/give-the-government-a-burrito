@@ -6,7 +6,7 @@ angular.module('jsCodingTest').controller('GiveTheGovernmentABurrito', function(
 
     var self = this
 
-    self.foodType ='burger'
+    self.foodType ='Select category'
 
     self.change = function() {
       self.getFoods()

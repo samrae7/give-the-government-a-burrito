@@ -5,3 +5,28 @@
   box-sizing: border-box;
 }
 
+.page-wrapper {
+  max-width:90%;
+  margin: 0 auto;
+}
+
+.title-bar img {
+  max-width:74%;
+}
+
+.title-bar {
+  margin-bottom: 0.9rem;
+  padding-left: 0.6rem;
+}
+
+form {
+  margin-left: -0.55rem;
+}
+
+label {
+  font-size: 1.05rem;;
+}
+
+
+
+

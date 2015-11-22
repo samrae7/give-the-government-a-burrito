@@ -5,35 +5,50 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body ng-app="jsCodingTest">
-        <main ng-controller="GiveTheGovernmentABurrito as cp">
-            <select ng-model="cp.foodType" name="select">
-                <option value="burrito">Burritos</option> 
-                <option value="burger" selected>Burgers</option>
-            </select>
-
-            <label>Search: <input ng-model="cp.searchText.name" ng-change="cp.change()"></label>
-
-
-<div class="row small-up-1 medium-up-2 large-up-4">   
-    <div class="column" ng-repeat="food in cp.foods | filter:cp.searchText">
-        <div class="dish-container">
-            <img ng-src="{{food.images[0].medium}}" class="thumbnail" alt="">
-            <div>
-                <h5>{{food.name}}</h5>
-                <p><strong>Vendor</strong>: {{food.vendor.name}}</p>
-                <p><strong>Cost:</strong> &#163{{food.totalGrossFoodCost}}</p>
+        <div class="page-wrapper">
+            <div class="title-bar">
+                <div class="title-bar-left">
+                    <img src="./images/hop_logo.png" alt="Houses of Parliament logo">
+                </div>
             </div>
+            <main ng-controller="GiveTheGovernmentABurrito as cp">
+                <form>
+                    <div class="row form-box">
+                        <div class="medium-3 columns search-box">
+                            <label>Search:
+                                <input ng-model="cp.searchText.name" ng-change="cp.change()" type="text" placeholder="I want to eat...">
+                            </label>
+                        </div>
+                        <div class="medium-3 columns">
+                            <label>Cuisine:
+                                <select ng-model="cp.foodType" name="select">
+                                    <option value="Select category" disabled selected>Select category</option>
+                                    <option value="british">British</option> 
+                                    <option value="european" selected>European</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                        </div>
+                    </div>
+                </form>
+                    
+                <div class="row small-up-1 medium-up-2 large-up-4">   
+                    <div class="column" ng-repeat="food in cp.foods | filter:cp.searchText">
+                        <div class="dish-container">
+                            <img ng-src="{{food.images[0].medium}}" class="thumbnail" alt="">
+                            <div>
+                                <h5>{{food.name}}</h5>
+                                <p><strong>Vendor</strong>: {{food.vendor.name}}</p>
+                                <p><strong>Cost:</strong> &#163{{food.totalGrossFoodCost}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
-    </div>
-</div>
 
-
-  
-
-
-         
-        </main>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/js/foundation.js"></script>
         <script src="lib/angular.min.js"></script>
         <script src="lib-integration.js"></script>
         <script src="node_modules/citypantry-js-lib/dist/lib-es5-with-browser-polyfill.js"></script>
