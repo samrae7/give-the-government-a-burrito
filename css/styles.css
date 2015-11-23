@@ -29,6 +29,12 @@ label {
 
 .button {
   margin-bottom: 0;
+  background-color: whitesmoke;
+  color:black;
+}
+
+.button:hover {
+  background-color: #36454F;
 }
 
 
