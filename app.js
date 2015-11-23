@@ -6,7 +6,9 @@ angular.module('jsCodingTest').controller('GiveTheGovernmentABurrito', function(
 
     var self = this
 
-    self.foodType ='Select category'
+    self.foodType =''
+
+    self.cuisineTypes = []
 
     self.change = function() {
       self.getFoods()
@@ -15,12 +17,21 @@ angular.module('jsCodingTest').controller('GiveTheGovernmentABurrito', function(
     self.getFoods = function() {
       PackagesFactory.searchPackages('','SW1A0AA').then(function(response) {
         self.foods = response.data.packages
-        console.log(self.foods)
+        //console.log(self.foods)
       })
 
     }
 
     self.getFoods()
+
+    PackagesFactory.getCuisineTypes().then(function(response){
+      response.data.cuisineTypes.forEach(function(e,i,a) {
+        self.cuisineTypes.push(e)
+      })
+      console.log(self.cuisineTypes)
+    })
+
+  })
 
 
 
@@ -30,4 +41,4 @@ angular.module('jsCodingTest').controller('GiveTheGovernmentABurrito', function(
     // for burritos that can be delivered to the Houses of Parliament in London.
     // The API URL that should be called is:
     // https://api.citypantry.com/packages/search?name=Burrito&postcode=SW1A%200AA
-});
+
