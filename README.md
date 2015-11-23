@@ -7,6 +7,8 @@
 * Install package dependencies (npm install)
 * Start local server (eg. python -m SimpleHTTPServer 9000)
 
+![Screen shot](/image/screenshot.png?raw=true "screenshot")
+
 
 
 
